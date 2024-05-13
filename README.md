@@ -27,7 +27,7 @@
 ### Description:<br />
 Storage - I am using local PostgreSQL with 2 main tables - users for authentication and notes itself. You can find a scheme in the “Task 2” folder.<br /><br /> 
 
-LLM - I stopped on open-source LLM model llama3-70b-8192 powered by groq.com. It has such limitations: requests per minute = 30, requests per day =14400, tokens per minute = 6000 and context window 8192 tokens (6000 words). https://console.groq.com/settings/limits<br /><br />
+LLM - I stopped on open-source LLM model llama3-70b-8192 powered by https://groq.com/ API. It has such limitations: requests per minute = 30, requests per day =14400, tokens per minute = 6000 and context window 8192 tokens (6000 words). https://console.groq.com/settings/limits<br /><br />
 
 App - Main app created using Flask.<br /><br />
 
