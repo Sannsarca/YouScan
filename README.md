@@ -23,5 +23,15 @@
     &emsp;groq: 0.1.0<br />
     &emsp;re: 2.7.1<br />
     &emsp;requests: 2.25.1<br /><br />
-   
-  Here is link to video-presentation:.
+
+### Description:<br />
+Storage - I am using local PostgreSQL with 2 main tables - users for authentication and notes itself. You can find a scheme in the “Task 2” folder.<br /><br /> 
+
+LLM - I stopped on open-source LLM model llama3-70b-8192 powered by groq.com. It has such limitations: requests per minute = 30, requests per day =14400, tokens per minute = 6000 and context window 8192 tokens (6000 words).<br /><br />
+
+App - Main app created using Flask.<br /><br />
+
+Architecture - we have a database setup on pgadmin4, an app that connects to it for note extraction and save and an LLM model that receives questions with notes and gives answers based on the question.<br /><br />
+
+Live demo will be sent to you personally.
+
