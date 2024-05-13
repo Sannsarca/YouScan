@@ -1,6 +1,6 @@
 # YouScan
 
-1. Are you a good detective?<br />
+## 1. Are you a good detective?<br />
   Task located in "Task 1" folder.<br />
   There are images of viualisations, PDF file with conclusions and Jupiter Notebook.<br /><br />
 
@@ -12,7 +12,7 @@
     &emsp;seaborn: 0.11.1<br />
     &emsp;scikit-learn: 0.24.2<br /><br />
 
-3. Are you a good hacker?<br />
+## 2. Are you a good hacker?<br />
   Task located in "Task 2" folder.<br />
   There are "main" app script, database initiation script, templates of pages in "templates" folder.<br /><br />
 
