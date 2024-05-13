@@ -16,11 +16,11 @@
   Task located in "Task 2" folder. There are "main" app script, database initiation script, templates of pages in "templates" folder.
 
   Requirements for app:
-  libraries:
-    flask: 2.0.2
-    psycopg2: 2.9.3
-    groq: 0.1.0
-    re: 2.7.1
-    requests: 2.25.1
+  \nlibraries:
+    \nflask: 2.0.2
+    \npsycopg2: 2.9.3
+    \ngroq: 0.1.0
+    \nre: 2.7.1
+    \nrequests: 2.25.1
    
   Here is link to video-presentation:.
