@@ -1,0 +1,122 @@
+<style>
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+    background-color: #337AB7;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #337AB7;
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #337AB7;
+}
+</style>
+<!doctype html>
+<html>
+<head>
+<title>Notekeeper Login</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />    
+</head>
+<body >
+<div class="container" >
+    <div class="row" style="padding:50px;">
+        <p><h1>Your Notes</h1></p>
+        <table class="styled-table"> 
+            <thead>
+                <tr> 
+                    <td>ID</td>
+                    
+                    <td>Note</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in data %}
+                <tr> 
+                    <td>{{row[0]}}</td>
+                    <td>{{row[1]}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table> 
+        <form action="/show" method="POST">
+            <div class="mb-3">
+              <label class="form-label">Number of last notes to show:</label>
+              <input type="text" id="num" name="num" class="form-control">
+            </div>
+            <div class="mb-3">
+                <p>{{error1}}</p>
+            </div>
+            <button type="submit" class="btn btn-primary">Show</button>
+          </form>
+
+        <form action="/save" method="POST">
+            <div class="mb-3">
+              <label class="form-label">Write a new note to save:</label>
+              <input type="text" id="note" name="note" class="form-control">
+            </div>
+            <div class="mb-3">
+                <p>{{error2}}</p>
+            </div>
+            <button type="submit" class="btn btn-primary">Save</button>
+          </form>
+
+          <form action="/llm" method="POST">
+            <div class="mb-3">
+              <label class="form-label">Ask LLM something:</label>
+              <input type="text" id="ask" name="ask" class="form-control">
+            </div>
+            <div class="mb-3">
+                <p>{{error3}}</p>
+            </div>
+            <button type="submit" class="btn btn-primary">Ask</button>
+          </form>
+          <p><h1>Relevant Notes</h1></p>
+          <div class="mb-3">
+            <p>{{answer}}</p>
+          </div>
+          <table class="styled-table"> 
+              <thead>
+                  <tr> 
+                      <td>ID</td>
+                      
+                      <td>Note</td>
+                  </tr>
+              </thead>
+              <tbody>
+                  {% for row in relevant %}
+                  <tr> 
+                      <td>{{row[0]}}</td>
+                      <td>{{row[1]}}</td>
+                  </tr>
+                  {% endfor %}
+              </tbody>
+          </table> 
+   </div>
+</div>
+</body>
+</html>
